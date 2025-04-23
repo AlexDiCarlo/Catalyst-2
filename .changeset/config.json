@@ -9,7 +9,7 @@
   "access": "public",
   "privatePackages": {
     "version": true,
-    "tag": true
+    "tag": false
   },
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
