@@ -16,6 +16,11 @@ env:
   BIGCOMMERCE_STOREFRONT_TOKEN: ${{ secrets.BIGCOMMERCE_STOREFRONT_TOKEN }}
   BIGCOMMERCE_CHANNEL_ID: ${{ secrets.BIGCOMMERCE_CHANNEL_ID }}
 
+
+permissions:
+  contents: write
+
+
 jobs:
   lint-typecheck:
     name: Lint, Typecheck, and gql.tada
