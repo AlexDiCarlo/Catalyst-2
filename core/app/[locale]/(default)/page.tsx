@@ -8,6 +8,7 @@ import { revalidate } from '~/client/revalidate-target';
 import { ProductCardCarousel } from '~/components/product-card-carousel';
 import { ProductCardCarouselFragment } from '~/components/product-card-carousel/fragment';
 import { Slideshow } from '~/components/slideshow';
+import { Nuqlium } from '~/components/nuqlium';
 
 const HomePageQuery = graphql(
   `
@@ -56,23 +57,11 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
-      <Slideshow />
+    <div className="fade-in-fast opacity-0">
+      <Nuqlium pagetype="pages" pagekey="home" main={true}/>
+    </div>
 
-      <div className="my-10">
-        <ProductCardCarousel
-          products={featuredProducts}
-          showCart={false}
-          showCompare={false}
-          title={t('Carousel.featuredProducts')}
-        />
-        <ProductCardCarousel
-          products={newestProducts}
-          showCart={false}
-          showCompare={false}
-          title={t('Carousel.newestProducts')}
-        />
-      </div>
-    </>
+  </>
   );
 }
 
