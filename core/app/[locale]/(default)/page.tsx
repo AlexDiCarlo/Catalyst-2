@@ -63,6 +63,7 @@ export default async function Home({ params }: Props) {
       <Nuqlium pagetype="pages" pagekey="home" main={true}/>
     </div>
 
+
   </>
   );
 }
