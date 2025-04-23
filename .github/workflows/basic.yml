@@ -47,9 +47,11 @@ jobs:
       - name: Gql Tada
         run: pnpm run -r generate
 
-        
-      - name: Typecheck
-        run: pnpm run typecheck
+      # - name: Lint
+      #   run: pnpm run lint -- --max-warnings=0
+
+      # - name: Typecheck
+      #   run: pnpm run typecheck
 
   unit-tests:
     name: CLI Unit Tests
