@@ -9,6 +9,7 @@ import { useState } from 'react';
 
  
 
+
 const GlideContainer = forwardRef<any, any>(
   ({ children, products, content, type, id, customTemplate }, ref) => {
 
