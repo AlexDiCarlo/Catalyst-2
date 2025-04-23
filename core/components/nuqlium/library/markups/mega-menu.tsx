@@ -75,7 +75,7 @@ const Megamenu = memo(function Megamenu(props:any){
                         </div>
                         )
                     })}
-                    
+
                     {content.menu?.map((item:any, index:any) => {
                     panelCountMobile++;
                     return (
@@ -126,48 +126,53 @@ const BuildMenuItem = function(props:any) {
     let count = 0;
 
     // Update the out column style 
-    if (item.width && item.width != "") {
-        columnsStyle = `w-full lg:${item.width} px-4 mb-4 lg:mb-0 lg:px-4`;
-    } else {  
-        switch(columns){
-            case 1:
-            case "1":
-                columnsStyle = `w-full  px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
-            break;
-            case 2:
-            case "2":
-                columnsStyle = `w-full lg:w-1/2 px-4 mb-4 lg:mb-0 lg:px-4  ${item.mobile_background_color} lg:bg-transparent`;
-            break;
-            case 3:
-            case "3":    
-                columnsStyle = `w-full lg:w-1/3 px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
-            break;
-            case 4:
-            case "4":    
-                columnsStyle = `w-full lg:w-1/4 px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
-            break;
-            case 5:
-            case "5":    
-                columnsStyle = `w-full lg:w-1/5 px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
-            break;
-            case 6:
-            case "6":    
-                columnsStyle = `w-full lg:w-1/6 px-4 mb-4 lg:mb-0 lg:px-4  ${item.mobile_background_color} lg:bg-transparent`;
-            break;
-            case "5one":  
-            count++;
-            {columns == 0 ?
-                columnsStyle = "w-full lg:w-1/5 px-4 mb-4 lg:mb-8"
-                    :  
-                columnsStyle ="w-full lg:w-4/5 px-4 mb-4 lg:mb-8"
-            }
-        break;
+   if (item.width && item.width != "") {
+      columnsStyle = `w-full lg:${item.width} px-4 mb-4 lg:mb-0 lg:px-4`;
+    } else {
+      switch(columns){
+        case 1:
+        case "1":
+          columnsStyle = `w-full  px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
+          break;
 
-            default:
-                break;
-        }  
+        case 2:
+        case "2":
+          columnsStyle = `w-full lg:w-1/2 px-4 mb-4 lg:mb-0 lg:px-4  ${item.mobile_background_color} lg:bg-transparent`;
+          break;
+
+        case 3:
+        case "3":
+          columnsStyle = `w-full lg:w-1/3 px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
+          break;
+
+        case 4:
+        case "4":
+          columnsStyle = `w-full lg:w-1/4 px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
+          break;
+
+        case 5:
+        case "5":
+          columnsStyle = `w-full lg:w-1/5 px-4 mb-4 lg:mb-0 lg:px-4 ${item.mobile_background_color} lg:bg-transparent`;
+          break;
+
+        case 6:
+        case "6":
+          columnsStyle = `w-full lg:w-1/6 px-4 mb-4 lg:mb-0 lg:px-4  ${item.mobile_background_color} lg:bg-transparent`;
+          break;
+
+        case "5one":
+          count++;
+          {columns == 0 ?
+            columnsStyle = "w-full lg:w-1/5 px-4 mb-4 lg:mb-8"
+              :
+            columnsStyle ="w-full lg:w-4/5 px-4 mb-4 lg:mb-8"
+          }
+          break;
+
+        default:
+          break;
+      }
     }
-
 
 
     // Check what type of column will be rendered 
