@@ -180,9 +180,11 @@ const BuildMenuItem = function(props:any) {
         case "grid":
             
         break;
+
         case "image":
            
         case "feed":
+
             return (
                 <div className={columnsStyle}>
                     <div className="w-full mb-4 lg:mb-0 md:px-2 2xl:px-0" data-nqc-navfeed>
@@ -191,6 +193,7 @@ const BuildMenuItem = function(props:any) {
                 </div>
             )
         break;
+
         case "block":
            
             return (
@@ -202,7 +205,9 @@ const BuildMenuItem = function(props:any) {
                 )
            
         break;
+
         case "zone":
+
             return (
             <div className={columnsStyle}>
                 <div className="w-full  mb-4 lg:mb-0 px-0 ">
@@ -211,6 +216,7 @@ const BuildMenuItem = function(props:any) {
             </div>
             )
         break;
+        
         case "content":
             return (
                 <div className={columnsStyle}>
